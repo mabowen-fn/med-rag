@@ -9,6 +9,7 @@ from .agentic_graph_rag import AgenticGraphRAG
 from .multi_source_retriever import MultiSourceRetriever, MedicalKnowledgeGraph
 from .discrepancy_refiner import DiscrepancyRefiner
 from .citation_verifier import CitationVerifier
+from .query_decomposer import QueryDecomposer
 
 __all__ = [
     "HybridRetriever",
@@ -22,4 +23,5 @@ __all__ = [
     "MedicalKnowledgeGraph",
     "DiscrepancyRefiner",
     "CitationVerifier",
+    "QueryDecomposer",
 ]

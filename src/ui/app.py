@@ -6,7 +6,7 @@ from pathlib import Path
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from src.pipeline import MedicalChatEngine
+from src.pipeline import MedicalChatEngine, SOTAMedicalChatEngine
 from src.pipeline.hybrid_retriever import HybridRetriever
 from src.pipeline.reranker import Reranker
 from src.pipeline.confidence_scorer import ConfidenceScorer
@@ -16,7 +16,7 @@ from config import config
 
 
 @st.cache_resource
-def load_chat_engine():
+def load_chat_engine(use_sota=False):
     """Load chat engine with caching"""
     with st.spinner("Loading models... This may take a few minutes on first run."):
         # Load embedding model
@@ -37,12 +37,23 @@ def load_chat_engine():
         citation_tracker = CitationTracker()
         
         # Create chat engine
-        chat_engine = MedicalChatEngine(
-            retriever=retriever,
-            reranker=reranker,
-            confidence_scorer=confidence_scorer,
-            citation_tracker=citation_tracker,
-        )
+        if use_sota:
+            chat_engine = SOTAMedicalChatEngine(
+                retriever=retriever,
+                reranker=reranker,
+                confidence_scorer=confidence_scorer,
+                citation_tracker=citation_tracker,
+                enable_agentic_rag=True,
+                enable_discrepancy_refinement=True,
+                enable_citation_verification=True,
+            )
+        else:
+            chat_engine = MedicalChatEngine(
+                retriever=retriever,
+                reranker=reranker,
+                confidence_scorer=confidence_scorer,
+                citation_tracker=citation_tracker,
+            )
         
         return chat_engine
 
@@ -59,24 +70,45 @@ def main():
     st.markdown("**Retrieval-Augmented Generation for Medical QA**")
     st.markdown("*Yunnan University Graduate Course Project*")
     
-    # Load chat engine
-    chat_engine = load_chat_engine()
-    
-    if chat_engine is None:
-        st.error("Failed to load chat engine. Please check your configuration.")
-        return
-    
     # Sidebar
     with st.sidebar:
         st.header("⚙️ Settings")
+        
+        # SOTA mode toggle
+        use_sota = st.checkbox(
+            "🚀 Enable SOTA Pipeline", 
+            value=False,
+            help="Enable advanced features: Agentic Graph RAG, Discrepancy Refinement, Citation Verification"
+        )
+        
         use_rag = st.checkbox("Use RAG", value=True)
         show_confidence = st.checkbox("Show Confidence Score", value=True)
         show_citations = st.checkbox("Show Citations", value=True)
         
         if st.button("🔄 Reset Conversation"):
-            chat_engine.reset_conversation()
             st.session_state.messages = []
             st.rerun()
+        
+        st.markdown("---")
+        
+        # Display mode information
+        if use_sota:
+            st.success("**SOTA Mode Active**")
+            st.markdown("""
+            **Advanced Features:**
+            - ✅ Agentic Graph RAG
+            - ✅ Multi-Source Retrieval
+            - ✅ Discrepancy Refinement
+            - ✅ Citation Verification
+            """)
+        else:
+            st.info("**Baseline Mode**")
+            st.markdown("""
+            Standard RAG pipeline with:
+            - Hybrid retrieval
+            - Reranking
+            - Confidence scoring
+            """)
         
         st.markdown("---")
         st.markdown("### About")
@@ -88,6 +120,13 @@ def main():
         - **FAISS** for vector search
         - **BM25** for sparse retrieval
         """)
+    
+    # Load chat engine with appropriate mode
+    chat_engine = load_chat_engine(use_sota=use_sota)
+    
+    if chat_engine is None:
+        st.error("Failed to load chat engine. Please check your configuration.")
+        return
     
     # Initialize session state
     if "messages" not in st.session_state:

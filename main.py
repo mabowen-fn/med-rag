@@ -15,6 +15,7 @@ from src.pipeline import (
     ConfidenceScorer,
     CitationTracker,
     MedicalChatEngine,
+    SOTAMedicalChatEngine,
 )
 from src.evaluation import RAGEvaluator
 
@@ -81,9 +82,17 @@ def build_index():
     return faiss_index, texts, metadata
 
 
-def create_chat_engine(faiss_index=None, texts=None, metadata=None):
-    """Create and return a configured chat engine"""
-    logger.info("Creating chat engine")
+def create_chat_engine(faiss_index=None, texts=None, metadata=None, use_sota=False):
+    """Create and return a configured chat engine
+    
+    Args:
+        faiss_index: Pre-built FAISS index (optional)
+        texts: Document texts for BM25 (optional)
+        metadata: Document metadata (optional)
+        use_sota: If True, use SOTA pipeline with agentic RAG, 
+                  discrepancy refinement, and citation verification
+    """
+    logger.info(f"Creating {'SOTA' if use_sota else 'baseline'} chat engine")
     
     # Load embedding model
     embedding_model = EmbeddingModel()
@@ -109,14 +118,26 @@ def create_chat_engine(faiss_index=None, texts=None, metadata=None):
     citation_tracker = CitationTracker()
     
     # Create chat engine
-    chat_engine = MedicalChatEngine(
-        retriever=retriever,
-        reranker=reranker,
-        confidence_scorer=confidence_scorer,
-        citation_tracker=citation_tracker,
-    )
+    if use_sota:
+        chat_engine = SOTAMedicalChatEngine(
+            retriever=retriever,
+            reranker=reranker,
+            confidence_scorer=confidence_scorer,
+            citation_tracker=citation_tracker,
+            enable_agentic_rag=True,
+            enable_discrepancy_refinement=True,
+            enable_citation_verification=True,
+        )
+        logger.info("SOTA chat engine created with agentic RAG, discrepancy refinement, and citation verification")
+    else:
+        chat_engine = MedicalChatEngine(
+            retriever=retriever,
+            reranker=reranker,
+            confidence_scorer=confidence_scorer,
+            citation_tracker=citation_tracker,
+        )
+        logger.info("Baseline chat engine created")
     
-    logger.info("Chat engine created successfully")
     return chat_engine
 
 
