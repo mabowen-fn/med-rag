@@ -1,6 +1,14 @@
 """Configuration for Medical RAG System"""
 from pathlib import Path
 from pydantic import BaseModel, Field
+import torch
+
+
+def _detect_device() -> str:
+    """Auto-detect best available device"""
+    if torch.cuda.is_available():
+        return "cuda"
+    return "cpu"
 
 
 class ModelConfig(BaseModel):
@@ -8,7 +16,7 @@ class ModelConfig(BaseModel):
     embedding_model: str = "BAAI/bge-m3"
     reranker_model: str = "BAAI/bge-reranker-v2-m3"
     llm_model: str = "qwen3:8b"
-    device: str = "cpu"  # Mac M1 CPU mode
+    device: str = _detect_device()  # Auto-detect GPU/CPU
 
 
 class DataConfig(BaseModel):
