@@ -1,0 +1,2031 @@
+{
+  "dataset_info": {
+    "name": "Expanded Medical QA Dataset",
+    "version": "2.0",
+    "description": "Comprehensive medical question-answer pairs including MedQA and PubMedQA",
+    "total_pairs": 197,
+    "categories": [
+      "general_medicine",
+      "neurology",
+      "gastroenterology",
+      "pharmacology",
+      "pulmonology",
+      "infectious_disease",
+      "endocrinology",
+      "emergency_medicine",
+      "cardiology"
+    ],
+    "sources": [
+      "Original",
+      "MedQA",
+      "PubMedQA"
+    ]
+  },
+  "qa_pairs": [
+    {
+      "id": "cardio_001",
+      "category": "cardiology",
+      "question": "What are the common symptoms of myocardial infarction?",
+      "answer": "Common symptoms of myocardial infarction include chest pain or discomfort (often described as pressure, squeezing, or fullness), pain radiating to the left arm, jaw, back, or stomach, shortness of breath, cold sweat, nausea, lightheadedness, and unusual fatigue. Women may experience atypical symptoms such as jaw pain, back pain, or indigestion.",
+      "difficulty": "easy",
+      "keywords": [
+        "heart attack",
+        "chest pain",
+        "symptoms",
+        "myocardial infarction"
+      ]
+    },
+    {
+      "id": "cardio_002",
+      "category": "cardiology",
+      "question": "How is hypertension classified according to current guidelines?",
+      "answer": "According to ACC/AHA guidelines, hypertension is classified as: Normal (less than 120/80 mmHg), Elevated (systolic 120-129 and diastolic less than 80), Stage 1 (systolic 130-139 or diastolic 80-89), Stage 2 (systolic 140 or higher or diastolic 90 or higher), and Hypertensive crisis (systolic higher than 180 and/or diastolic higher than 120).",
+      "difficulty": "medium",
+      "keywords": [
+        "blood pressure",
+        "classification",
+        "stages",
+        "hypertension"
+      ]
+    },
+    {
+      "id": "cardio_003",
+      "category": "cardiology",
+      "question": "What are the first-line treatments for heart failure with reduced ejection fraction?",
+      "answer": "First-line treatments for HFrEF include ACE inhibitors or ARBs (or ARNI like sacubitril/valsartan), beta-blockers (carvedilol, metoprolol succinate, or bisoprolol), mineralocorticoid receptor antagonists (spironolactone or eplerenone), and SGLT2 inhibitors (dapagliflozin or empagliflozin). Diuretics are used for symptom relief. Lifestyle modifications including sodium restriction and exercise are also essential.",
+      "difficulty": "hard",
+      "keywords": [
+        "heart failure",
+        "HFrEF",
+        "treatment",
+        "medications"
+      ]
+    },
+    {
+      "id": "endo_001",
+      "category": "endocrinology",
+      "question": "What are the diagnostic criteria for diabetes mellitus?",
+      "answer": "Diabetes mellitus is diagnosed when any of the following are met: Fasting plasma glucose of 126 mg/dL or higher, 2-hour plasma glucose of 200 mg/dL or higher during OGTT, HbA1c of 6.5% or higher, or random plasma glucose of 200 mg/dL or higher in patients with classic symptoms of hyperglycemia. Results should be confirmed with repeat testing unless there is unequivocal hyperglycemia.",
+      "difficulty": "medium",
+      "keywords": [
+        "diabetes",
+        "diagnosis",
+        "glucose",
+        "HbA1c"
+      ]
+    },
+    {
+      "id": "endo_002",
+      "category": "endocrinology",
+      "question": "How does metformin work in type 2 diabetes?",
+      "answer": "Metformin works through multiple mechanisms: it decreases hepatic glucose production by inhibiting gluconeogenesis, increases insulin sensitivity in peripheral tissues (especially muscle), improves glucose uptake and utilization, decreases intestinal absorption of glucose, and may alter gut microbiota and increase GLP-1 secretion. It does not increase insulin secretion and has a low risk of hypoglycemia.",
+      "difficulty": "hard",
+      "keywords": [
+        "metformin",
+        "mechanism",
+        "type 2 diabetes",
+        "insulin resistance"
+      ]
+    },
+    {
+      "id": "endo_003",
+      "category": "endocrinology",
+      "question": "What are the acute complications of diabetes?",
+      "answer": "Acute complications of diabetes include: Diabetic ketoacidosis (DKA) - characterized by hyperglycemia, ketosis, and metabolic acidosis, primarily in type 1 diabetes; Hyperosmolar hyperglycemic state (HHS) - severe hyperglycemia with hyperosmolality without significant ketosis, primarily in type 2 diabetes; and Hypoglycemia - blood glucose below 70 mg/dL, which can be caused by medications, skipped meals, or excessive exercise.",
+      "difficulty": "medium",
+      "keywords": [
+        "diabetes complications",
+        "DKA",
+        "HHS",
+        "hypoglycemia"
+      ]
+    },
+    {
+      "id": "neuro_001",
+      "category": "neurology",
+      "question": "What are the warning signs of stroke?",
+      "answer": "The warning signs of stroke can be remembered with the acronym BE-FAST: Balance loss (sudden), Eyes (vision changes in one or both eyes), Face drooping (one side), Arm weakness (one side), Speech difficulty (slurred or unable to speak), Time to call emergency services. Other signs include sudden severe headache, confusion, trouble walking, dizziness, and numbness or weakness on one side of the body.",
+      "difficulty": "easy",
+      "keywords": [
+        "stroke",
+        "symptoms",
+        "warning signs",
+        "BE-FAST"
+      ]
+    },
+    {
+      "id": "neuro_002",
+      "category": "neurology",
+      "question": "How is ischemic stroke treated in the acute phase?",
+      "answer": "Acute ischemic stroke treatment includes: Intravenous thrombolysis with alteplase (tPA) within 4.5 hours of symptom onset for eligible patients; Mechanical thrombectomy within 6-24 hours for large vessel occlusions; Antiplatelet therapy (aspirin) within 24-48 hours; Supportive care including blood pressure management, glucose control, and temperature regulation; and Secondary prevention with anticoagulation for atrial fibrillation-related strokes.",
+      "difficulty": "hard",
+      "keywords": [
+        "stroke treatment",
+        "thrombolysis",
+        "tPA",
+        "thrombectomy"
+      ]
+    },
+    {
+      "id": "pulm_001",
+      "category": "pulmonology",
+      "question": "What is the stepwise approach to asthma management?",
+      "answer": "Asthma management follows a stepwise approach: Step 1 - As-needed short-acting beta-agonist (SABA) for intermittent asthma; Step 2 - Low-dose inhaled corticosteroid (ICS) for mild persistent; Step 3 - Low-dose ICS plus long-acting beta-agonist (LABA) or medium-dose ICS; Step 4 - Medium-dose ICS plus LABA; Step 5 - High-dose ICS plus LABA and consider biologics; Step 6 - High-dose ICS plus LABA plus oral corticosteroids and biologics.",
+      "difficulty": "medium",
+      "keywords": [
+        "asthma",
+        "treatment",
+        "stepwise",
+        "inhaled corticosteroids"
+      ]
+    },
+    {
+      "id": "pulm_002",
+      "category": "pulmonology",
+      "question": "What are the GOLD criteria for COPD classification?",
+      "answer": "GOLD criteria classify COPD by spirometry: GOLD 1 (Mild) - FEV1 of 80% or more predicted; GOLD 2 (Moderate) - FEV1 50-79% predicted; GOLD 3 (Severe) - FEV1 30-49% predicted; GOLD 4 (Very Severe) - FEV1 less than 30% predicted. The ABCD assessment combines symptom burden (CAT or mMRC scores) and exacerbation history to guide treatment: Group A (0-1 moderate exacerbations, not leading to hospital admission), Group B (0-1 moderate exacerbations with high symptoms), Group C (2 or more or 1 leading to hospitalization with low symptoms), Group D (2 or more or 1 leading to hospitalization with high symptoms).",
+      "difficulty": "hard",
+      "keywords": [
+        "COPD",
+        "GOLD",
+        "classification",
+        "FEV1"
+      ]
+    },
+    {
+      "id": "gastro_001",
+      "category": "gastroenterology",
+      "question": "What are the alarm symptoms in dyspepsia?",
+      "answer": "Alarm symptoms in dyspepsia that warrant immediate investigation include: Unintentional weight loss, progressive dysphagia, odynophagia, unexplained iron deficiency anemia, persistent vomiting, palpable mass or lymphadenopathy, family history of upper gastrointestinal cancer, onset of symptoms after age 60, and evidence of gastrointestinal bleeding (melena or hematemesis). These symptoms suggest possible malignancy or serious organic disease requiring endoscopic evaluation.",
+      "difficulty": "medium",
+      "keywords": [
+        "dyspepsia",
+        "alarm symptoms",
+        "red flags",
+        "endoscopy"
+      ]
+    },
+    {
+      "id": "gastro_002",
+      "category": "gastroenterology",
+      "question": "How is H. pylori infection diagnosed and treated?",
+      "answer": "H. pylori diagnosis methods include: Non-invasive tests - urea breath test, stool antigen test, and serology; Invasive tests - rapid urease test, histology, and culture during endoscopy. First-line treatment is triple therapy (PPI, clarithromycin, and amoxicillin or metronidazole) for 14 days. Quadruple therapy (PPI, bismuth, tetracycline, and metronidazole) is used in areas with high clarithromycin resistance or as second-line treatment. Treatment success should be confirmed with urea breath test or stool antigen test at least 4 weeks after completion.",
+      "difficulty": "medium",
+      "keywords": [
+        "H. pylori",
+        "diagnosis",
+        "treatment",
+        "triple therapy"
+      ]
+    },
+    {
+      "id": "infect_001",
+      "category": "infectious_disease",
+      "question": "What are the common causes of community-acquired pneumonia?",
+      "answer": "Common causes of community-acquired pneumonia include: Typical bacteria - Streptococcus pneumoniae (most common), Haemophilus influenzae, Moraxella catarrhalis, and Staphylococcus aureus; Atypical bacteria - Mycoplasma pneumoniae, Chlamydophila pneumoniae, and Legionella pneumophila; Viruses - influenza, RSV, adenovirus, and SARS-CoV-2. The most common cause varies by age group and comorbidities.",
+      "difficulty": "medium",
+      "keywords": [
+        "pneumonia",
+        "community-acquired",
+        "pathogens",
+        "bacteria"
+      ]
+    },
+    {
+      "id": "infect_002",
+      "category": "infectious_disease",
+      "question": "How is sepsis defined and managed according to Surviving Sepsis Campaign?",
+      "answer": "Sepsis is defined as life-threatening organ dysfunction caused by a dysregulated host response to infection, identified by SOFA score increase of 2 or more points. Septic shock is sepsis with persistent hypotension requiring vasopressors to maintain MAP of 65 mmHg or higher and lactate above 2 mmol/L despite adequate fluid resuscitation. Management includes: The Hour-1 Bundle - measure lactate, obtain blood cultures before antibiotics, administer broad-spectrum antibiotics, begin rapid fluid resuscitation (30 mL/kg crystalloid for hypotension or lactate 4 mmol/L or higher), and start vasopressors if hypotensive during or after fluid resuscitation. Additional measures include source control, glycemic control, and DVT/stress ulcer prophylaxis.",
+      "difficulty": "hard",
+      "keywords": [
+        "sepsis",
+        "SOFA",
+        "septic shock",
+        "Hour-1 Bundle"
+      ]
+    },
+    {
+      "id": "pharm_001",
+      "category": "pharmacology",
+      "question": "What are the major drug interactions with warfarin?",
+      "answer": "Major warfarin interactions include: Drugs that increase bleeding risk - aspirin, NSAIDs, clopidogrel, SSRIs; Drugs that increase INR - amiodarone, fluconazole, metronidazole, trimethoprim-sulfamethoxazole, ciprofloxacin; Drugs that decrease INR - rifampin, carbamazepine, phenytoin, St. John's wort, vitamin K-rich foods; Foods high in vitamin K - leafy greens, broccoli, Brussels sprouts. Regular INR monitoring is essential when starting or stopping any medication.",
+      "difficulty": "medium",
+      "keywords": [
+        "warfarin",
+        "drug interactions",
+        "INR",
+        "anticoagulation"
+      ]
+    },
+    {
+      "id": "pharm_002",
+      "category": "pharmacology",
+      "question": "What are the contraindications for ACE inhibitors?",
+      "answer": "Contraindications for ACE inhibitors include: Absolute contraindications - history of angioedema with ACE inhibitors, bilateral renal artery stenosis, pregnancy (teratogenic), and concurrent use with aliskiren in diabetic patients; Relative contraindications - severe hyperkalemia (K above 5.5 mEq/L), severe renal impairment (GFR below 30 mL/min), aortic stenosis, and hypotension. ACE inhibitors should be used cautiously in patients with volume depletion or those on diuretics.",
+      "difficulty": "medium",
+      "keywords": [
+        "ACE inhibitors",
+        "contraindications",
+        "angioedema",
+        "pregnancy"
+      ]
+    },
+    {
+      "id": "emerg_001",
+      "category": "emergency_medicine",
+      "question": "What is the primary survey in trauma assessment?",
+      "answer": "The primary survey in trauma follows the ABCDE approach: Airway with cervical spine protection - assess patency and maintain spine immobilization; Breathing - evaluate for tension pneumothorax, open pneumothorax, flail chest, and massive hemothorax; Circulation with hemorrhage control - assess pulses, control bleeding, establish IV access, and initiate fluid resuscitation; Disability - rapid neurological assessment using Glasgow Coma Scale and pupil response; Exposure - completely undress the patient while preventing hypothermia. Each step must be completed before moving to the next.",
+      "difficulty": "medium",
+      "keywords": [
+        "trauma",
+        "primary survey",
+        "ABCDE",
+        "ATLS"
+      ]
+    },
+    {
+      "id": "emerg_002",
+      "category": "emergency_medicine",
+      "question": "How is anaphylaxis diagnosed and treated?",
+      "answer": "Anaphylaxis is diagnosed when any of three criteria are met: Acute onset of illness with skin/mucosal involvement AND respiratory compromise OR reduced blood pressure; Two or more of the following after exposure to a likely allergen - skin/mucosal involvement, respiratory compromise, reduced blood pressure, or persistent gastrointestinal symptoms; Reduced blood pressure after exposure to a known allergen. Treatment: First-line - intramuscular epinephrine (0.3-0.5 mg of 1:1000 in adults, 0.01 mg/kg in children) in the mid-outer thigh, repeat every 5-15 minutes if needed; Position patient supine with legs elevated; High-flow oxygen; IV fluid resuscitation; Second-line - H1 and H2 antihistamines, corticosteroids, and bronchodilators as adjuncts.",
+      "difficulty": "hard",
+      "keywords": [
+        "anaphylaxis",
+        "epinephrine",
+        "allergic reaction",
+        "emergency"
+      ]
+    },
+    {
+      "id": "cardio_004",
+      "category": "cardiology",
+      "question": "What are the indications for anticoagulation in atrial fibrillation?",
+      "answer": "Anticoagulation in atrial fibrillation is guided by the CHA2DS2-VASc score: Congestive heart failure (1 point), Hypertension (1 point), Age 75 or older (2 points), Diabetes (1 point), Stroke/TIA/thromboembolism history (2 points), Vascular disease (1 point), Age 65-74 (1 point), Sex category - female (1 point). Anticoagulation is recommended for men with score of 2 or more and women with score of 3 or more. Consider for men with score of 1 and women with score of 2. Direct oral anticoagulants (DOACs) are preferred over warfarin for non-valvular AF.",
+      "difficulty": "hard",
+      "keywords": [
+        "atrial fibrillation",
+        "anticoagulation",
+        "CHA2DS2-VASc",
+        "stroke prevention"
+      ]
+    },
+    {
+      "id": "endo_004",
+      "category": "endocrinology",
+      "question": "What are the causes and treatment of hypothyroidism?",
+      "answer": "Causes of hypothyroidism include: Primary - Hashimoto's thyroiditis (most common in iodine-sufficient areas), iodine deficiency (most common worldwide), post-radioactive iodine or surgery, medications (lithium, amiodarone), and congenital; Secondary - pituitary or hypothalamic disease. Treatment is levothyroxine replacement, starting dose based on age, weight, and cardiac status. Young healthy patients start at full replacement dose (1.6 mcg/kg/day). Elderly or cardiac patients start low (12.5-25 mcg/day) and titrate gradually. Monitor TSH every 6-8 weeks until stable, then annually. Take on empty stomach, 30-60 minutes before breakfast, separated from calcium, iron, and PPIs by 4 hours.",
+      "difficulty": "medium",
+      "keywords": [
+        "hypothyroidism",
+        "Hashimoto's",
+        "levothyroxine",
+        "treatment"
+      ]
+    },
+    {
+      "id": "neuro_003",
+      "category": "neurology",
+      "question": "What are the treatment options for Parkinson's disease?",
+      "answer": "Parkinson's disease treatment includes: Levodopa-carbidopa - gold standard, most effective for motor symptoms; Dopamine agonists - pramipexole, ropinirole, rotigotine; MAO-B inhibitors - selegiline, rasagiline, safinamide; COMT inhibitors - entacapone, opicapone (extend levodopa effect); Anticholinergics - trihexyphenidyl, benztropine (for tremor); Amantadine (for dyskinesia); Deep brain stimulation - for advanced disease with motor fluctuations; Physical therapy, occupational therapy, and speech therapy for symptom management. Treatment is individualized based on age, symptom severity, and cognitive status.",
+      "difficulty": "hard",
+      "keywords": [
+        "Parkinson's disease",
+        "levodopa",
+        "dopamine agonists",
+        "treatment"
+      ]
+    },
+    {
+      "id": "pulm_003",
+      "category": "pulmonology",
+      "question": "How is pulmonary embolism diagnosed and risk-stratified?",
+      "answer": "PE diagnosis begins with clinical probability assessment using Wells score or Geneva score. D-dimer testing rules out PE in low-probability patients. CT pulmonary angiography is the gold standard for diagnosis. V/Q scan is alternative when CT is contraindicated. Risk stratification: Massive (high-risk) PE - sustained hypotension, pulselessness, or persistent bradycardia; Submassive (intermediate-risk) PE - right ventricular dysfunction or myocardial necrosis without hypotension; Low-risk PE - no markers of right ventricular dysfunction or necrosis. Treatment ranges from anticoagulation alone for low-risk to thrombolysis or embolectomy for massive PE.",
+      "difficulty": "hard",
+      "keywords": [
+        "pulmonary embolism",
+        "diagnosis",
+        "Wells score",
+        "risk stratification"
+      ]
+    },
+    {
+      "id": "gastro_003",
+      "category": "gastroenterology",
+      "question": "What are the causes and management of acute pancreatitis?",
+      "answer": "Causes of acute pancreatitis include: Gallstones (most common, 40-70%), alcohol (25-35%), hypertriglyceridemia, ERCP, medications, trauma, infections, and autoimmune. Diagnosis requires 2 of 3: characteristic abdominal pain, serum amylase or lipase 3 times upper limit of normal, and characteristic imaging findings. Management: Aggressive IV fluid resuscitation (lactated Ringer's preferred), pain control, nutritional support (early enteral feeding within 24-48 hours), and treating the underlying cause. Gallstone pancreatitis requires cholecystectomy during the same admission. Severity is assessed by Ranson criteria, APACHE II, or BISAP score.",
+      "difficulty": "hard",
+      "keywords": [
+        "pancreatitis",
+        "gallstones",
+        "alcohol",
+        "management"
+      ]
+    },
+    {
+      "id": "infect_003",
+      "category": "infectious_disease",
+      "question": "What is the appropriate antibiotic therapy for common infections?",
+      "answer": "Common infections and empiric antibiotic therapy: Community-acquired pneumonia (outpatient) - amoxicillin or doxycycline or macrolide; (inpatient) - beta-lactam plus macrolide or respiratory fluoroquinolone; Uncomplicated UTI - nitrofurantoin, trimethoprim-sulfamethoxazole, or fosfomycin; Cellulitis - cephalexin or dicloxacillin (cover MSSA); Pyelonephritis - fluoroquinolone or ceftriaxone; Strep pharyngitis - penicillin or amoxicillin. Always consider local resistance patterns, patient allergies, and adjust based on culture results.",
+      "difficulty": "medium",
+      "keywords": [
+        "antibiotics",
+        "empiric therapy",
+        "common infections",
+        "treatment"
+      ]
+    },
+    {
+      "id": "pharm_003",
+      "category": "pharmacology",
+      "question": "What are the adverse effects of statins and how are they managed?",
+      "answer": "Statin adverse effects include: Myalgia (muscle pain without CK elevation) - most common, occurs in 5-10%; Myopathy (muscle symptoms with CK elevation) - 1-5%; Rhabdomyolysis (severe muscle injury with CK above 10 times upper limit and renal impairment) - rare, less than 0.1%; Hepatotoxicity - elevated transaminases, usually mild and reversible; Diabetes - small increased risk, benefits outweigh risks; GI symptoms - nausea, diarrhea, constipation. Management: For myalgia, switch to different statin, lower dose, or alternate-day dosing. Check CK if symptoms are severe. Monitor liver function at baseline and if symptoms develop. CoQ10 supplementation may help with myalgia but evidence is limited.",
+      "difficulty": "medium",
+      "keywords": [
+        "statins",
+        "adverse effects",
+        "myopathy",
+        "rhabdomyolysis"
+      ]
+    },
+    {
+      "id": "emerg_003",
+      "category": "emergency_medicine",
+      "question": "What is the approach to altered mental status in the emergency department?",
+      "answer": "Approach to altered mental status: First, assess ABCs and stabilize. Check bedside glucose immediately to rule out hypoglycemia. Use AEIOU TIPS mnemonic for differential: Alcohol/Acidosis, Epilepsy/Electrolytes, Insulin (hypo/hyperglycemia), Opiates/Oxygen, Uremia, Trauma/Temperature, Infection, Psych/Poisoning, Stroke/Shock. Diagnostic workup includes: Vital signs and full physical exam including neurological; Labs - CBC, electrolytes, glucose, renal function, liver function, ammonia, toxicology screen, blood gases; Imaging - CT head if trauma suspected or focal neurological deficits; Lumbar puncture if meningitis or subarachnoid hemorrhage suspected; EEG if seizures suspected. Treat underlying cause and provide supportive care.",
+      "difficulty": "hard",
+      "keywords": [
+        "altered mental status",
+        "emergency",
+        "AEIOU TIPS",
+        "diagnosis"
+      ]
+    },
+    {
+      "id": "cardio_005",
+      "category": "cardiology",
+      "question": "What are the ECG changes in acute myocardial infarction?",
+      "answer": "ECG evolution in acute MI: Hyperacute phase (minutes to hours) - tall peaked T waves; Acute phase (hours to days) - ST segment elevation, which develops into Q waves; Evolving phase (days to weeks) - T wave inversion, persistent Q waves; Old/healed phase (weeks to months) - persistent Q waves, T waves may normalize. ST elevation is defined as 1 mm or more in two contiguous limb leads or 2 mm or more in two contiguous precordial leads. Reciprocal ST depression may be seen in opposite leads. New LBBB is considered STEMI equivalent. Posterior MI shows ST depression in V1-V3 with tall R waves.",
+      "difficulty": "hard",
+      "keywords": [
+        "ECG",
+        "myocardial infarction",
+        "ST elevation",
+        "Q waves"
+      ]
+    },
+    {
+      "id": "endo_005",
+      "category": "endocrinology",
+      "question": "How is diabetic ketoacidosis managed?",
+      "answer": "DKA management: Fluid resuscitation - 1-1.5 L normal saline in first hour, then 250-500 mL/hour based on hydration status; Insulin therapy - IV regular insulin bolus of 0.1 units/kg followed by 0.1 units/kg/hour infusion, or 0.14 units/kg/hour without bolus; Potassium replacement - if K below 3.3 mEq/L, hold insulin and give 20-40 mEq/hour until K above 3.3; if K 3.3-5.2, give 20-30 mEq per liter of IV fluid; if K above 5.2, do not give potassium but check every 2 hours; Monitor glucose hourly, electrolytes every 2-4 hours; Transition to subcutaneous insulin when glucose below 200 mg/dL, patient is eating, and anion gap is closed; Identify and treat precipitating cause (infection, non-compliance, new onset diabetes).",
+      "difficulty": "hard",
+      "keywords": [
+        "DKA",
+        "diabetic ketoacidosis",
+        "insulin",
+        "fluid resuscitation"
+      ]
+    },
+    {
+      "id": "neuro_004",
+      "category": "neurology",
+      "question": "What are the diagnostic criteria for multiple sclerosis?",
+      "answer": "MS diagnosis uses McDonald criteria requiring demonstration of dissemination in space and time. Dissemination in space: lesions in 2 or more of 4 CNS regions (periventricular, cortical/juxtacortical, infratentorial, spinal cord). Dissemination in time: simultaneous presence of gadolinium-enhancing and non-enhancing lesions, or a new lesion on follow-up MRI, or CSF-specific oligoclonal bands. Clinical presentation includes optic neuritis, internuclear ophthalmoplegia, sensory symptoms, motor weakness, cerebellar ataxia, and bladder dysfunction. Diagnosis requires exclusion of mimics and supportive evidence from MRI, CSF analysis, and evoked potentials.",
+      "difficulty": "hard",
+      "keywords": [
+        "multiple sclerosis",
+        "McDonald criteria",
+        "dissemination",
+        "MRI"
+      ]
+    },
+    {
+      "id": "pulm_004",
+      "category": "pulmonology",
+      "question": "What are the indications for mechanical ventilation?",
+      "answer": "Indications for mechanical ventilation: Hypoxemic respiratory failure - PaO2 below 60 mmHg despite supplemental oxygen, seen in ARDS, pneumonia, pulmonary edema; Hypercapnic respiratory failure - PaCO2 above 50 mmHg with pH below 7.25, seen in COPD exacerbation, neuromuscular disease; Airway protection - decreased consciousness, inability to protect airway, severe facial trauma; Respiratory muscle fatigue - respiratory rate above 35, use of accessory muscles, paradoxical breathing; Shock - to reduce oxygen consumption from respiratory muscles; Specific conditions - status asthmaticus, pulmonary embolism with hemodynamic instability, post-operative respiratory failure.",
+      "difficulty": "medium",
+      "keywords": [
+        "mechanical ventilation",
+        "respiratory failure",
+        "indications",
+        "intubation"
+      ]
+    },
+    {
+      "id": "gastro_004",
+      "category": "gastroenterology",
+      "question": "How is inflammatory bowel disease diagnosed and differentiated?",
+      "answer": "IBD diagnosis combines clinical, endoscopic, histological, and radiological findings. Crohn's disease features: transmural inflammation, skip lesions, any part of GI tract (mouth to anus), cobblestone appearance, fissures, fistulas, strictures, non-caseating granulomas; perianal disease common. Ulcerative colitis features: mucosal and submucosal inflammation only, continuous involvement starting from rectum, limited to colon, loss of vascular pattern, pseudopolyps, crypt abscesses; no perianal disease. Diagnostic workup: colonoscopy with biopsy, fecal calprotectin (elevated in IBD), CRP, CBC, albumin; imaging (CT/MR enterography for Crohn's); exclude infections (C. diff, TB).",
+      "difficulty": "hard",
+      "keywords": [
+        "IBD",
+        "Crohn's disease",
+        "ulcerative colitis",
+        "diagnosis"
+      ]
+    },
+    {
+      "id": "infect_004",
+      "category": "infectious_disease",
+      "question": "What is the approach to fever of unknown origin?",
+      "answer": "Fever of unknown origin (FUO) is defined as temperature above 38.3°C on multiple occasions for more than 3 weeks without diagnosis after 1 week of inpatient investigation or 3 outpatient visits. Approach: Detailed history including travel, occupational exposures, animal contacts, medications, family history; Thorough physical exam including skin, lymph nodes, heart murmurs, abdominal masses; Initial labs - CBC with differential, comprehensive metabolic panel, blood cultures (3 sets), urinalysis and culture, chest X-ray, HIV test, ESR/CRP; Second-tier tests based on clues - autoimmune serology, CT imaging, echocardiogram, tuberculosis testing; Consider infections (TB, endocarditis, abscess), malignancies (lymphoma, leukemia), autoimmune diseases (vasculitis, adult Still's), and miscellaneous (drug fever, factitious).",
+      "difficulty": "hard",
+      "keywords": [
+        "FUO",
+        "fever of unknown origin",
+        "diagnosis",
+        "workup"
+      ]
+    },
+    {
+      "id": "pharm_004",
+      "category": "pharmacology",
+      "question": "What are the principles of antibiotic stewardship?",
+      "answer": "Antibiotic stewardship principles: Right drug - choose narrowest spectrum agent based on culture results, avoid broad-spectrum when possible; Right dose - optimize dosing based on pharmacokinetics/pharmacodynamics, renal and hepatic function; Right duration - use shortest effective course, typically 5-7 days for most infections; Right route - switch from IV to oral when clinically stable and absorbing; De-escalation - narrow therapy once culture results available; Duration review - reassess need at 48-72 hours; Documentation - document indication, dose, and duration; Monitoring - track antibiotic use, resistance patterns, C. diff rates; Education - educate prescribers and patients about appropriate antibiotic use.",
+      "difficulty": "medium",
+      "keywords": [
+        "antibiotic stewardship",
+        "antimicrobial",
+        "principles",
+        "resistance"
+      ]
+    },
+    {
+      "id": "emerg_004",
+      "category": "emergency_medicine",
+      "question": "How is status epilepticus managed?",
+      "answer": "Status epilepticus management: Time 0-5 minutes - assess ABCs, oxygen, IV access, check glucose, treat hypoglycemia if present; Time 5-20 minutes - first-line: IV lorazepam 0.1 mg/kg (max 4 mg) or IV diazepam 0.15 mg/kg (max 10 mg) or IM midazolam 10 mg for patients over 40 kg; Time 20-40 minutes - second-line: IV fosphenytoin 20 mg PE/kg (preferred) or IV levetiracetam 60 mg/kg (max 4500 mg) or IV valproic acid 40 mg/kg (max 3000 mg); Time 40-60 minutes - third-line (refractory): continuous infusion of midazolam, propofol, or pentobarbital with EEG monitoring and intubation; Identify and treat underlying cause (infection, metabolic, structural, withdrawal).",
+      "difficulty": "hard",
+      "keywords": [
+        "status epilepticus",
+        "seizures",
+        "benzodiazepines",
+        "emergency"
+      ]
+    },
+    {
+      "id": "cardio_006",
+      "category": "cardiology",
+      "question": "What are the management strategies for acute coronary syndrome?",
+      "answer": "ACS management: Immediate - aspirin 325 mg, nitroglycerin sublingual or IV for pain, oxygen if saturations below 90%, morphine for refractory pain; Antiplatelet therapy - dual antiplatelet therapy with aspirin plus P2Y12 inhibitor (ticagrelor, prasugrel, or clopidogrel); Anticoagulation - unfractionated heparin, enoxaparin, or bivalirudin; STEMI - primary PCI within 90 minutes if available, otherwise fibrinolysis within 30 minutes if no contraindications; NSTEMI/UA - risk stratification with TIMI or GRACE score, early invasive strategy for high-risk patients; Long-term - high-intensity statin, beta-blocker, ACE inhibitor if indicated, lifestyle modifications.",
+      "difficulty": "hard",
+      "keywords": [
+        "acute coronary syndrome",
+        "STEMI",
+        "NSTEMI",
+        "PCI"
+      ]
+    },
+    {
+      "id": "endo_006",
+      "category": "endocrinology",
+      "question": "What are the causes and workup of adrenal insufficiency?",
+      "answer": "Adrenal insufficiency causes: Primary (Addison's disease) - autoimmune (most common in developed countries), tuberculosis, fungal infections, metastatic disease, adrenal hemorrhage, genetic disorders; Secondary - pituitary disease, prolonged glucocorticoid use (most common), pituitary surgery or radiation; Tertiary - hypothalamic disease, prolonged glucocorticoid use. Workup: Morning cortisol (below 3 mcg/dL diagnostic, above 15 excludes), ACTH stimulation test (cosyntropin 250 mcg, cortisol should rise above 18-20 mcg/dL), ACTH level (elevated in primary, low/normal in secondary/tertiary), metyrapone test, insulin tolerance test; Imaging - CT adrenals for primary, MRI pituitary for secondary.",
+      "difficulty": "hard",
+      "keywords": [
+        "adrenal insufficiency",
+        "Addison's disease",
+        "cortisol",
+        "ACTH"
+      ]
+    },
+    {
+      "id": "neuro_005",
+      "category": "neurology",
+      "question": "What are the treatment options for acute migraine?",
+      "answer": "Acute migraine treatment: Mild to moderate - NSAIDs (ibuprofen, naproxen), acetaminophen, or combination analgesics; Moderate to severe - triptans (sumatriptan, rizatriptan, zolmitriptan) - most effective, contraindicated in cardiovascular disease; ergotamines (dihydroergotamine) - alternative to triptans; antiemetics (metoclopramide, prochlorperazine) - especially with nausea; ditans (lasmiditan) - new option without vasoconstriction; gepants (ubrogepant, rimegepant) - CGRP antagonists for patients with cardiovascular risk. Administration routes include oral, nasal, subcutaneous for faster relief or when vomiting. Avoid medication overuse (more than 10 days per month).",
+      "difficulty": "medium",
+      "keywords": [
+        "migraine",
+        "treatment",
+        "triptans",
+        "acute"
+      ]
+    },
+    {
+      "id": "pulm_005",
+      "category": "pulmonology",
+      "question": "How is ARDS diagnosed and managed?",
+      "answer": "ARDS diagnosis (Berlin criteria): Acute onset within 1 week of known insult, bilateral opacities on chest imaging not fully explained by effusions, lobar collapse, or nodules, respiratory failure not fully explained by cardiac failure or fluid overload, and PaO2/FiO2 ratio of 300 or less with PEEP of 5 cm H2O or higher. Severity: Mild (PaO2/FiO2 200-300), Moderate (100-200), Severe (below 100). Management: Treat underlying cause, lung-protective ventilation (tidal volume 6 mL/kg predicted body weight, plateau pressure below 30 cm H2O), adequate PEEP, prone positioning for severe cases, conservative fluid strategy, neuromuscular blockade for severe dyssynchrony, consider ECMO for refractory hypoxemia.",
+      "difficulty": "hard",
+      "keywords": [
+        "ARDS",
+        "Berlin criteria",
+        "mechanical ventilation",
+        "lung-protective"
+      ]
+    },
+    {
+      "id": "gastro_005",
+      "category": "gastroenterology",
+      "question": "What are the indications and surveillance guidelines for colonoscopy?",
+      "answer": "Colonoscopy indications: Colorectal cancer screening (average risk starting at age 45), diagnostic evaluation of symptoms (bleeding, change in bowel habits, iron deficiency anemia), surveillance of polyps or cancer, evaluation of abnormal imaging, inflammatory bowel disease surveillance, family history of colorectal cancer. Surveillance intervals: Average risk - every 10 years; 1-2 small tubular adenomas - 7-10 years; 3-10 adenomas - 3-5 years; More than 10 adenomas - 1 year; Adenoma 1 cm or larger - 3 years; Villous histology - 3 years; High-grade dysplasia - 3 years; Piecemeal removal - 6 months; IBD - 1-3 years starting 8 years after diagnosis depending on extent and severity.",
+      "difficulty": "medium",
+      "keywords": [
+        "colonoscopy",
+        "screening",
+        "polyps",
+        "surveillance"
+      ]
+    },
+    {
+      "id": "infect_005",
+      "category": "infectious_disease",
+      "question": "What is the approach to HIV pre-exposure prophylaxis?",
+      "answer": "PrEP approach: Indications - HIV-negative individuals at substantial risk including men who have sex with men, heterosexuals with HIV-positive partners, people who inject drugs and share equipment, those with high-risk sexual behaviors (inconsistent condom use, multiple partners, STIs). Regimens: Daily oral - tenofovir disoproxil fumarate plus emtricitabine (Truvada) or tenofovir alafenamide plus emtricitabine (Descovy); On-demand (2-1-1) - 2 pills 2-24 hours before sex, 1 pill 24 hours after first dose, 1 pill 24 hours after second dose (only for MSM). Monitoring: HIV test before starting and every 3 months, renal function at baseline and periodically, STI screening, pregnancy testing, adherence counseling. PrEP is highly effective when taken consistently.",
+      "difficulty": "medium",
+      "keywords": [
+        "PrEP",
+        "HIV prevention",
+        "pre-exposure prophylaxis",
+        "Truvada"
+      ]
+    },
+    {
+      "id": "pharm_005",
+      "category": "pharmacology",
+      "question": "What are the principles of anticoagulation reversal?",
+      "answer": "Anticoagulation reversal: Warfarin - Vitamin K 10 mg IV for serious bleeding (takes 12-24 hours for full effect), 4-factor prothrombin complex concentrate (4F-PCC) for rapid reversal (works in minutes), fresh frozen plasma if PCC unavailable; Dabigatran - idarucizumab (Praxbind) 5 g IV, activated charcoal if ingestion within 2 hours, hemodialysis removes 60%; Factor Xa inhibitors (apixaban, rivaroxaban) - andexanet alfa (Andexxa) for life-threatening bleeding, 4F-PCC as alternative; Heparin (unfractionated) - protamine sulfate 1 mg per 100 units heparin (max 50 mg); LMWH - protamine 1 mg per 1 mg enoxaparin (partial reversal only). Always assess timing of last dose, renal function, and bleeding severity.",
+      "difficulty": "hard",
+      "keywords": [
+        "anticoagulation reversal",
+        "warfarin",
+        "idarucizumab",
+        "andexanet"
+      ]
+    },
+    {
+      "id": "emerg_005",
+      "category": "emergency_medicine",
+      "question": "How is diabetic emergencies differentiated and managed?",
+      "answer": "Diabetic emergencies: Diabetic ketoacidosis (DKA) - hyperglycemia (glucose above 250 mg/dL), metabolic acidosis (pH below 7.3, bicarbonate below 18), ketonemia or ketonuria, anion gap above 10; treatment includes IV fluids, IV insulin infusion, potassium replacement, and treating precipitating cause. Hyperosmolar hyperglycemic state (HHS) - severe hyperglycemia (glucose above 600 mg/dL), hyperosmolality (serum osmolality above 320 mOsm/kg), minimal or no ketosis, normal or near-normal pH; treatment focuses on aggressive fluid resuscitation (6-10 liters), insulin therapy, and electrolyte correction. Hypoglycemia - glucose below 70 mg/dL with symptoms; treatment includes oral glucose if conscious, IV dextrose or IM glucagon if unconscious; identify and treat cause.",
+      "difficulty": "hard",
+      "keywords": [
+        "diabetic emergencies",
+        "DKA",
+        "HHS",
+        "hypoglycemia"
+      ]
+    },
+    {
+      "id": "cardio_007",
+      "category": "cardiology",
+      "question": "What are the indications for cardiac catheterization?",
+      "answer": "Cardiac catheterization indications: Diagnostic - evaluation of coronary artery disease in patients with angina or positive stress test, assessment of valvular heart disease severity, evaluation of cardiomyopathies, assessment of congenital heart defects, evaluation of cardiac transplant rejection; Therapeutic - primary PCI for STEMI, PCI for unstable angina or NSTEMI, balloon valvuloplasty for valvular stenosis, closure of atrial or ventricular septal defects, pericardiocentesis for tamponade, endomyocardial biopsy. Contraindications include severe uncontrolled hypertension, active infection, severe coagulopathy, patient refusal, and lack of appropriate vascular access.",
+      "difficulty": "medium",
+      "keywords": [
+        "cardiac catheterization",
+        "PCI",
+        "coronary angiography",
+        "indications"
+      ]
+    },
+    {
+      "id": "endo_007",
+      "category": "endocrinology",
+      "question": "What are the causes and management of hypercalcemia?",
+      "answer": "Hypercalcemia causes: Primary hyperparathyroidism (most common outpatient), malignancy (most common inpatient - PTHrP secretion, bone metastases, hematologic malignancies), vitamin D excess, granulomatous diseases (sarcoidosis), medications (thiazides, lithium), immobilization, familial hypocalciuric hypercalcemia. Management: Mild (calcium below 12 mg/dL) - hydration, avoid calcium-raising medications, treat underlying cause; Moderate (12-14 mg/dL) - IV normal saline (3-4 liters/day), consider loop diuretics after volume repletion, treat underlying cause; Severe (above 14 mg/dL) or symptomatic - aggressive IV hydration, calcitonin (rapid but short-acting), IV bisphosphonates (zoledronic acid or pamidronate - takes 2-4 days for full effect), consider denosumab for refractory cases or bisphosphonate contraindication, dialysis for renal failure.",
+      "difficulty": "hard",
+      "keywords": [
+        "hypercalcemia",
+        "hyperparathyroidism",
+        "malignancy",
+        "treatment"
+      ]
+    },
+    {
+      "id": "neuro_006",
+      "category": "neurology",
+      "question": "What are the diagnostic criteria and treatment for Guillain-Barré syndrome?",
+      "answer": "Guillain-Barré syndrome diagnostic criteria: Progressive weakness in both arms and legs (required), absent or decreased deep tendon reflexes in affected limbs (required), monophasic course with onset to nadir between 12 hours and 4 weeks, symmetry of symptoms, mild sensory symptoms, cranial nerve involvement (especially facial weakness), autonomic dysfunction, absence of fever at onset, elevated CSF protein with normal cell count (albuminocytologic dissociation), electrodiagnostic features of demyelination. Treatment: IV immunoglobulin (0.4 g/kg/day for 5 days) or plasma exchange (4-5 exchanges over 1-2 weeks) - equally effective, start within 2 weeks of onset; supportive care including respiratory monitoring (FVC and NIF), DVT prophylaxis, pain management, physical therapy; avoid corticosteroids (not effective).",
+      "difficulty": "hard",
+      "keywords": [
+        "Guillain-Barré syndrome",
+        "GBS",
+        "IVIG",
+        "plasma exchange"
+      ]
+    },
+    {
+      "id": "pulm_006",
+      "category": "pulmonology",
+      "question": "What are the indications for chest tube placement?",
+      "answer": "Chest tube indications: Pneumothorax - large, symptomatic, tension, or recurrent; Hemothorax - any significant blood in pleural space; Pleural effusion - complicated parapneumonic effusion, empyema, or malignant effusion requiring drainage; Chylothorax - chyle leak in pleural space; Post-operative - after thoracic or cardiac surgery; Pleurodesis - for recurrent malignant effusions or pneumothorax. Contraindications include uncorrected coagulopathy (relative), patient refusal, and lack of indication. Complications include lung injury, intercostal artery bleeding, infection, malposition, and re-expansion pulmonary edema. Proper placement is in the 'safe triangle' - anterior to mid-axillary line, above the level of the nipple, lateral to the pectoral muscle.",
+      "difficulty": "medium",
+      "keywords": [
+        "chest tube",
+        "thoracostomy",
+        "pneumothorax",
+        "pleural effusion"
+      ]
+    },
+    {
+      "id": "gastro_006",
+      "category": "gastroenterology",
+      "question": "How is cirrhosis and its complications managed?",
+      "answer": "Cirrhosis management: Treat underlying cause (antivirals for viral hepatitis, abstinence for alcohol, weight loss for NASH); Ascites - sodium restriction (2 g/day), diuretics (spironolactone and furosemide in 100:40 ratio), large-volume paracentesis with albumin for refractory cases, TIPS for refractory ascites; Variceal bleeding - non-selective beta-blockers (propranolol, nadolol) for prophylaxis, endoscopic band ligation for acute bleeding, TIPS for refractory bleeding; Hepatic encephalopathy - lactulose (titrate to 2-3 soft stools/day), rifaximin as add-on; Hepatocellular carcinoma surveillance - ultrasound every 6 months; Liver transplantation evaluation for decompensated cirrhosis.",
+      "difficulty": "hard",
+      "keywords": [
+        "cirrhosis",
+        "ascites",
+        "variceal bleeding",
+        "encephalopathy"
+      ]
+    },
+    {
+      "id": "infect_006",
+      "category": "infectious_disease",
+      "question": "What is the approach to tuberculosis screening and treatment?",
+      "answer": "TB screening: Tuberculin skin test (TST) - 5 TU PPD intradermally, read at 48-72 hours, positive if induration is 5 mm or more (high-risk), 10 mm or more (moderate-risk), or 15 mm or more (low-risk); Interferon-gamma release assays (IGRA) - QuantiFERON or T-SPOT, single blood test, not affected by BCG vaccination. Latent TB treatment: Isoniazid for 9 months (preferred) or 6 months, rifampin for 4 months, isoniazid plus rifapentine for 3 months. Active TB treatment: RIPE regimen - rifampin, isoniazid, pyrazinamide, and ethambutol for 2 months, then rifampin and isoniazid for 4 months (total 6 months); directly observed therapy recommended; monitor for hepatotoxicity.",
+      "difficulty": "medium",
+      "keywords": [
+        "tuberculosis",
+        "TB",
+        "screening",
+        "treatment"
+      ]
+    },
+    {
+      "id": "pharm_006",
+      "category": "pharmacology",
+      "question": "What are the principles of chemotherapy-induced nausea and vomiting management?",
+      "answer": "CINV management based on emetogenic risk: Highly emetogenic (above 90% risk) - NK1 antagonist (aprepitant or fosaprepitant) plus 5-HT3 antagonist (ondansetron, palonosetron) plus dexamethasone, consider olanzapine; Moderately emetogenic (30-90% risk) - 5-HT3 antagonist plus dexamethasone, consider NK1 antagonist for carboplatin; Low emetogenic (10-30% risk) - dexamethasone alone or 5-HT3 antagonist plus dexamethasone; Minimal emetogenic (below 10% risk) - dexamethasone alone or no prophylaxis. Delayed CINV (24 hours to 5 days) - NK1 antagonist plus dexamethasone or olanzapine. Breakthrough CINV - olanzapine, metoclopramide, lorazepam, haloperidol. Consider patient risk factors (female, young, low alcohol use, history of motion sickness).",
+      "difficulty": "hard",
+      "keywords": [
+        "chemotherapy",
+        "nausea",
+        "vomiting",
+        "antiemetics"
+      ]
+    },
+    {
+      "id": "emerg_006",
+      "category": "emergency_medicine",
+      "question": "How is toxic alcohol ingestion diagnosed and treated?",
+      "answer": "Toxic alcohol ingestion: Methanol - sources include windshield washer fluid, solvents; metabolism to formic acid causes metabolic acidosis and ocular toxicity; treatment includes fomepizole (preferred) or ethanol to block alcohol dehydrogenase, folinic acid to enhance formic acid metabolism, hemodialysis for severe acidosis or visual symptoms; Ethylene glycol - sources include antifreeze, coolants; metabolism to glycolic and oxalic acid causes metabolic acidosis and renal failure with calcium oxalate crystals; treatment includes fomepizole or ethanol, thiamine and pyridoxine to shunt metabolism, hemodialysis for severe cases; Isopropanol - rubbing alcohol; metabolizes to acetone causing CNS depression without acidosis; treatment is supportive, hemodialysis rarely needed. Calculate osmolar gap (measured minus calculated osmolality) - elevated in all three.",
+      "difficulty": "hard",
+      "keywords": [
+        "toxic alcohol",
+        "methanol",
+        "ethylene glycol",
+        "fomepizole"
+      ]
+    },
+    {
+      "id": "cardio_008",
+      "category": "cardiology",
+      "question": "What are the indications for permanent pacemaker implantation?",
+      "answer": "Permanent pacemaker indications: Symptomatic sinus bradycardia or sick sinus syndrome; Third-degree (complete) AV block; Second-degree AV block type II (Mobitz II); Alternating bundle branch block; Symptomatic first-degree AV block with pacemaker syndrome; Carotid sinus hypersensitivity with recurrent syncope; Neurocardiogenic syncope with documented asystole; Hypersensitive cardioinhibitory response; Cardiac transplant recipients with persistent bradycardia. Contraindications include transient or reversible causes, asymptomatic first-degree AV block, and asymptomatic second-degree type I AV block. Pacemaker types include single-chamber (atrial or ventricular), dual-chamber (atrial and ventricular), and biventricular (for heart failure with dyssynchrony).",
+      "difficulty": "medium",
+      "keywords": [
+        "pacemaker",
+        "bradycardia",
+        "AV block",
+        "indications"
+      ]
+    },
+    {
+      "id": "endo_008",
+      "category": "endocrinology",
+      "question": "What are the causes and workup of Cushing's syndrome?",
+      "answer": "Cushing's syndrome causes: Exogenous (iatrogenic) - most common, from glucocorticoid medications; Endogenous - ACTH-dependent (Cushing's disease from pituitary adenoma, ectopic ACTH from tumors), ACTH-independent (adrenal adenoma, adrenal carcinoma, adrenal hyperplasia). Diagnostic workup: Confirm hypercortisolism - 24-hour urinary free cortisol (2-3 collections), late-night salivary cortisol (2 collections), 1 mg overnight dexamethasone suppression test (cortisol should suppress below 1.8 mcg/dL); Determine ACTH dependence - plasma ACTH (low suggests adrenal source, normal or elevated suggests pituitary or ectopic); Identify source - pituitary MRI, high-dose dexamethasone suppression test, CRH stimulation test, inferior petrosal sinus sampling; adrenal CT; chest/abdominal imaging for ectopic source.",
+      "difficulty": "hard",
+      "keywords": [
+        "Cushing's syndrome",
+        "hypercortisolism",
+        "dexamethasone",
+        "ACTH"
+      ]
+    },
+    {
+      "id": "neuro_007",
+      "category": "neurology",
+      "question": "What are the treatment options for myasthenia gravis?",
+      "answer": "Myasthenia gravis treatment: Symptomatic - acetylcholinesterase inhibitors (pyridostigmine) - first-line for most patients; Immunosuppression - corticosteroids (prednisone) for inadequate response to pyridostigmine, steroid-sparing agents (azathioprine, mycophenolate, cyclosporine, tacrolimus); Rapid immunomodulation - IV immunoglobulin or plasma exchange for myasthenic crisis or pre-operative optimization; Thymectomy - indicated for thymoma, and for generalized MG patients under 65 years old, especially AChR antibody positive; Newer agents - complement inhibitors (eculizumab, ravulizumab) for refractory AChR antibody-positive generalized MG, FcRn inhibitors (efgartigimod); Crisis management - ICU monitoring, respiratory support, IVIG or plasma exchange, treat precipitating factors (infection, medications).",
+      "difficulty": "hard",
+      "keywords": [
+        "myasthenia gravis",
+        "pyridostigmine",
+        "thymectomy",
+        "crisis"
+      ]
+    },
+    {
+      "id": "pulm_007",
+      "category": "pulmonology",
+      "question": "What are the diagnostic criteria and management of lung cancer?",
+      "answer": "Lung cancer diagnosis: Tissue biopsy via bronchoscopy, CT-guided biopsy, or surgical biopsy; staging with CT chest/abdomen, PET scan, brain MRI, and mediastinal staging (EBUS or mediastinoscopy); histologic classification (small cell vs non-small cell including adenocarcinoma, squamous cell, large cell); molecular testing (EGFR, ALK, ROS1, PD-L1, KRAS, BRAF, MET, RET, NTRK). Management by stage: Early stage (I-II) - surgical resection (lobectomy preferred), stereotactic body radiation for non-surgical candidates; Locally advanced (III) - concurrent chemoradiation, consolidation immunotherapy (durvalumab); Metastatic (IV) - targeted therapy for actionable mutations, immunotherapy (PD-1/PD-L1 inhibitors) alone or with chemotherapy, chemotherapy alone.",
+      "difficulty": "hard",
+      "keywords": [
+        "lung cancer",
+        "staging",
+        "targeted therapy",
+        "immunotherapy"
+      ]
+    },
+    {
+      "id": "gastro_007",
+      "category": "gastroenterology",
+      "question": "How is acute upper GI bleeding managed?",
+      "answer": "Acute upper GI bleeding management: Resuscitation - 2 large-bore IVs, crystalloid fluids, blood transfusion (target hemoglobin 7-8 g/dL, higher for cardiovascular disease), correct coagulopathy; Risk stratification - Glasgow-Blatchford score to determine need for intervention; Pre-endoscopic therapy - IV proton pump inhibitor (80 mg bolus then 8 mg/hour infusion for high-risk lesions), prokinetics (erythromycin) to improve visualization; Endoscopic therapy - within 24 hours, variceal bleeding (band ligation, sclerotherapy, consider TIPS), non-variceal bleeding (injection therapy, thermal therapy, clips for ulcers); Post-endoscopic - high-dose PPI for 72 hours for high-risk lesions, test and treat H. pylori, avoid NSAIDs; Consider angiography or surgery for refractory bleeding.",
+      "difficulty": "hard",
+      "keywords": [
+        "upper GI bleeding",
+        "variceal",
+        "ulcer",
+        "endoscopy"
+      ]
+    },
+    {
+      "id": "infect_007",
+      "category": "infectious_disease",
+      "question": "What is the approach to meningitis diagnosis and treatment?",
+      "answer": "Meningitis approach: Clinical presentation - fever, headache, neck stiffness, altered mental status, photophobia; Kernig and Brudzinski signs (low sensitivity); Diagnosis - lumbar puncture (opening pressure, cell count, glucose, protein, Gram stain, culture, PCR); bacterial (neutrophilic pleocytosis, low glucose, high protein), viral (lymphocytic pleocytosis, normal glucose, normal to high protein), fungal/TB (lymphocytic, very low glucose); blood cultures; CT head before LP if focal deficits, papilledema, immunocompromised, or seizures. Empiric treatment: Bacterial - ceftriaxone plus vancomycin plus ampicillin (if over 50 or immunocompromised), add dexamethasone before or with first antibiotic dose; Viral - acyclovir if HSV suspected; Adjust based on culture results. Prophylaxis for close contacts of meningococcal disease with rifampin, ciprofloxacin, or ceftriaxone.",
+      "difficulty": "hard",
+      "keywords": [
+        "meningitis",
+        "lumbar puncture",
+        "CSF",
+        "antibiotics"
+      ]
+    },
+    {
+      "id": "pharm_007",
+      "category": "pharmacology",
+      "question": "What are the principles of pain management in palliative care?",
+      "answer": "Palliative pain management: Assessment - use validated scales (0-10), characterize pain (nociceptive vs neuropathic), assess impact on function; WHO analgesic ladder - Step 1 (mild pain) - non-opioids (acetaminophen, NSAIDs); Step 2 (moderate pain) - weak opioids (codeine, tramadol) plus non-opioids; Step 3 (severe pain) - strong opioids (morphine, oxycodone, fentanyl, methadone) plus non-opioids; Opioid principles - start low and titrate, use around-the-clock dosing with breakthrough doses, rotate opioids if inadequate response or side effects, manage side effects proactively (laxatives for constipation, antiemetics for nausea); Adjuvants - gabapentinoids for neuropathic pain, corticosteroids for bone pain or inflammation, antidepressants, anticonvulsants; Non-pharmacologic - physical therapy, psychological support, radiation for bone metastases, nerve blocks.",
+      "difficulty": "hard",
+      "keywords": [
+        "palliative care",
+        "pain management",
+        "opioids",
+        "WHO ladder"
+      ]
+    },
+    {
+      "id": "emerg_007",
+      "category": "emergency_medicine",
+      "question": "How is malignant hyperthermia recognized and treated?",
+      "answer": "Malignant hyperthermia: Triggered by volatile anesthetics (halothane, sevoflurane, desflurane) and depolarizing muscle relaxants (succinylcholine); autosomal dominant inheritance, most commonly RYR1 gene mutation; pathophysiology involves uncontrolled calcium release from sarcoplasmic reticulum causing sustained muscle contraction and hypermetabolism. Recognition - masseter muscle rigidity after succinylcholine, tachycardia, tachypnea, hypercarbia (earliest sign), muscle rigidity, hyperthermia (late sign, can increase 1-2°C every 5 minutes), mixed metabolic and respiratory acidosis, hyperkalemia, myoglobinuria, elevated CK. Treatment - immediately discontinue triggering agents, hyperventilate with 100% oxygen, administer dantrolene 2.5 mg/kg IV bolus, repeat every 5 minutes until symptoms resolve (total dose up to 10 mg/kg); active cooling measures; treat hyperkalemia, acidosis, and arrhythmias; monitor for compartment syndrome and DIC; continue dantrolene 1 mg/kg every 4-6 hours for 24-48 hours.",
+      "difficulty": "hard",
+      "keywords": [
+        "malignant hyperthermia",
+        "dantrolene",
+        "anesthesia",
+        "RYR1"
+      ]
+    },
+    {
+      "id": "medmcqa_0000",
+      "category": "general_medicine",
+      "question": "Chronic urethral obstruction due to benign prismatic hyperplasia can lead to the following change in kidney parenchyma",
+      "answer": "Hyperophy",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0001",
+      "category": "general_medicine",
+      "question": "Which vitamin is supplied from only animal source:",
+      "answer": "Vitamin B7",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0002",
+      "category": "general_medicine",
+      "question": "All of the following are surgical options for morbid obesity except -",
+      "answer": "Duodenal Switch",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0004",
+      "category": "general_medicine",
+      "question": "Growth hormone has its effect on growth through?",
+      "answer": "Directly",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0005",
+      "category": "general_medicine",
+      "question": "Scrub typhus is transmitted by: September 2004",
+      "answer": "Tick",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0006",
+      "category": "general_medicine",
+      "question": "Abnormal vascular patterns seen with colposcopy in case of cervical intraepithelial neoplasia  are all except",
+      "answer": "Mosaicism",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0007",
+      "category": "general_medicine",
+      "question": "Per rectum examination is not a useful test for diagnosis of",
+      "answer": "Hemorrhoid",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0008",
+      "category": "general_medicine",
+      "question": "Characteristics of Remifentanyl – a) Metabolised by plasma esteraseb) Short half lifec) More potent than Alfentanyld) Dose reduced in hepatic and renal diseasee) Duration of action more than Alfentanyl",
+      "answer": "bc",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0009",
+      "category": "general_medicine",
+      "question": "Hypomimia is ?",
+      "answer": "Decreased execution",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0010",
+      "category": "general_medicine",
+      "question": "Naglers reaction is shown by",
+      "answer": "Clostridium botulinum",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0011",
+      "category": "general_medicine",
+      "question": "Which of the following statements are True/False? 1. Hirsutism, which is defined as androgen-dependent excessive male pattern hair growth, affects approximately 25% of women. 2. Virilization refers to a condition in which androgen levels are sufficiently high to cause additional signs and symptoms. 3. Frequently, patients with growth hormone excess (i.e., acromegaly) present with hirsutism. 4. A simple and commonly used method to grade hair growth is the modified scale of Ferriman and Gallwey. 5. Scores above 8 suggest excess androgen-mediated hair growth.",
+      "answer": "1, 3, 5 True & 2, 4 false",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0012",
+      "category": "general_medicine",
+      "question": "The pharmakokinetic change occurring in geriatric patient is due to",
+      "answer": "Liver metabolism",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0014",
+      "category": "general_medicine",
+      "question": "A 60 yr old chronic smoker presents with painless gross hematuria of 1 day duration. Investigation of choice to know the cause of hematuria",
+      "answer": "Urine routine",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0015",
+      "category": "general_medicine",
+      "question": "With which of the following receptors theophylline has an antagonistic interaction ?",
+      "answer": "Bradykinin receptors",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0019",
+      "category": "general_medicine",
+      "question": "Superior vena cava is derived from:",
+      "answer": "Pharyngeal arch",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0021",
+      "category": "general_medicine",
+      "question": "Position of vocal cord in cadaver is:",
+      "answer": "Paramedian",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0022",
+      "category": "general_medicine",
+      "question": "Organisms that has not been cultured successfully so far is-",
+      "answer": "Leptospira",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0023",
+      "category": "general_medicine",
+      "question": "Normal waist hip ratio of a female is below",
+      "answer": "0.7",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0024",
+      "category": "general_medicine",
+      "question": "The most common cause of renal scaring in a 3 year old child is -",
+      "answer": "Tuberculosis",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0025",
+      "category": "general_medicine",
+      "question": "A 6hours old snake bite patient comes to emergency with mild local edema at the injury site. On examination no abnormalities detected and lab repos are normal. Most appropriate management is",
+      "answer": "Incision and suction",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0026",
+      "category": "general_medicine",
+      "question": "Which of the following agents is most commonly associated with recurrent meningitis due to CSF leaks?",
+      "answer": "Meningococci",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0027",
+      "category": "general_medicine",
+      "question": "Treatment of choice in traumatic facial nerve injury is:",
+      "answer": "Facial sling",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0028",
+      "category": "general_medicine",
+      "question": "What is the best method of informing the rural population about Oral rehydration technique: March 2013 (d, f)",
+      "answer": "Chalk and talk/Lecture",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0031",
+      "category": "general_medicine",
+      "question": "All are True about Acute Osteomyelitis except",
+      "answer": "Severe pain",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0033",
+      "category": "general_medicine",
+      "question": "Regarding vaginal candidiasis which one of the following is false:",
+      "answer": "Intense pruritus",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0035",
+      "category": "general_medicine",
+      "question": "What is the most probable poal of entry of Aspergillus?",
+      "answer": "Blood",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0036",
+      "category": "general_medicine",
+      "question": "For TOF management in antenatal period includes ?",
+      "answer": "Open hea surgery",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0038",
+      "category": "general_medicine",
+      "question": "If solid line represent the rigid height, then the following diagram with excessive inter arch space is classified in?",
+      "answer": "Class - 1",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0039",
+      "category": "general_medicine",
+      "question": "Pearsonian measure of skewness -",
+      "answer": "Mode - Mean/ SD",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0040",
+      "category": "general_medicine",
+      "question": "Following are the causes of sudden loss of vision except ?",
+      "answer": "Central serous retinopathy",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0041",
+      "category": "general_medicine",
+      "question": "All of the following are features of Lymph node histology except",
+      "answer": "Coex and Medulla are present",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0044",
+      "category": "general_medicine",
+      "question": "All of the following statements are true regarding hyperophy, except:",
+      "answer": "Cells capable of division respond to stress by hyperophy and hyperplasia.",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0046",
+      "category": "general_medicine",
+      "question": "All are true about temporal arteritis except -",
+      "answer": "More corrunon in females",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0048",
+      "category": "general_medicine",
+      "question": "In chronic alcoholism the rate limiting component for alcohol metabolism excluding enzymes is/are : (PGI Dec 2008)",
+      "answer": "NADP",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0049",
+      "category": "general_medicine",
+      "question": "Minimum level of iodine iodized salt reaching the consumer level according to iodine programme should be:-",
+      "answer": "30 ppm",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0050",
+      "category": "general_medicine",
+      "question": "True statement regarding specific death rates",
+      "answer": "Find out cause or disease specific",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0051",
+      "category": "general_medicine",
+      "question": "Pre-exposure prophylaxis for rabies is given on days",
+      "answer": "0, 3",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0052",
+      "category": "general_medicine",
+      "question": "Regarding Sjogren's syndrome, all are true except: September 2010",
+      "answer": "Rheumatoid ahritis",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0054",
+      "category": "general_medicine",
+      "question": "Splenomegaly may be a feature of: March 2013",
+      "answer": "Megaloblastic anemia",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0055",
+      "category": "general_medicine",
+      "question": "Gp2b3A inhibitors are all except -",
+      "answer": "Tirofiban",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0056",
+      "category": "general_medicine",
+      "question": "True of case control studies -",
+      "answer": "It proceeds from cause to effect",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0057",
+      "category": "general_medicine",
+      "question": "All of the following could include the mechanism or function of oxigenases, EXCEPT:",
+      "answer": "Required for hydroxylation of steroids",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0058",
+      "category": "general_medicine",
+      "question": "According to recent SC judgment, doctor can be charged for medical negligence under 304-A, only if: AIIMS 12",
+      "answer": "Simple negligence",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0060",
+      "category": "general_medicine",
+      "question": "Prevalence is a:",
+      "answer": "Ratio",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0062",
+      "category": "general_medicine",
+      "question": "Position of limb in posterior dislocation of hip -",
+      "answer": "Flexion, abduction & external rotation",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0063",
+      "category": "general_medicine",
+      "question": "Drug causing malignant hyperthermia:(Asked twice in the exam)",
+      "answer": "Cisatracurium",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0066",
+      "category": "general_medicine",
+      "question": "All of the following structure lies outside the cavernous sinus except",
+      "answer": "Foramen lacerum",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0067",
+      "category": "general_medicine",
+      "question": "Which of the following is the best procedure done for intrapaum fetal monitoring:",
+      "answer": "Fetal scalp pH",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0068",
+      "category": "general_medicine",
+      "question": "Which of the following is measured by the device, Bellow's spirometer?",
+      "answer": "Closing volume",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0070",
+      "category": "general_medicine",
+      "question": "Atherosclerosis initiation by fibroblast plaque is mediated by injury to ?",
+      "answer": "Adventitia",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0071",
+      "category": "general_medicine",
+      "question": "The WBC that is considered “second line of defence” is:",
+      "answer": "Basophil",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0072",
+      "category": "general_medicine",
+      "question": "Mark the true statement regarding use of Lithium in maniac-depressive psychosis?",
+      "answer": "Monitoring of serum concentration is not useful for guiding dose adjustment",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0074",
+      "category": "general_medicine",
+      "question": "An Isograft indicates transfer of tissues between -",
+      "answer": "Related donors",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0075",
+      "category": "general_medicine",
+      "question": "All of the following are causes of congenital blindness Except",
+      "answer": "Congenital rubella",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0077",
+      "category": "general_medicine",
+      "question": "A 14-year-old girl presents with quadriparesis, facial palsy, winging of scapula and ptosis. There is h/o similar illness in father and brother but less severe. Her CPK level is also raised (500IU/L). She is probably suffering from?",
+      "answer": "Limb-girdle dystrophy",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0078",
+      "category": "general_medicine",
+      "question": "Which of the following is true statement regarding human eye",
+      "answer": "Cornea cut off wavelength upto 400 nm",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0079",
+      "category": "general_medicine",
+      "question": "Which of the following muscle is not a hybrid muscle",
+      "answer": "Pectoralis major",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0080",
+      "category": "general_medicine",
+      "question": "Delayed union of fracture of a bone follo-wing a surgical treatment may be due to",
+      "answer": "Inadequate mobilization",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0082",
+      "category": "general_medicine",
+      "question": "One standard detion in normal standard curev includes value-",
+      "answer": "50%",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0083",
+      "category": "general_medicine",
+      "question": "Foam cells are seen in infection with which virus ?",
+      "answer": "Measles",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0085",
+      "category": "general_medicine",
+      "question": "Rescue P.C.I is done for which of the following?",
+      "answer": "Persistent chest pain with ST elevation > 30 min after thrombolysis",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0086",
+      "category": "general_medicine",
+      "question": "Fever associated with infection",
+      "answer": "Is due to interleukin-1 released from CD4 T-helper cells",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0087",
+      "category": "general_medicine",
+      "question": "Last organ to putrefy in females is?",
+      "answer": "Liver",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0088",
+      "category": "general_medicine",
+      "question": "Hamartomatous lung tissue is?",
+      "answer": "Lobar sequestration",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0089",
+      "category": "general_medicine",
+      "question": "Test for diagnosis of pyogenic meningitis is?",
+      "answer": "CSF PCR",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0090",
+      "category": "general_medicine",
+      "question": "Causes of thickened gallbladder wall on ultrasound examination are all except:",
+      "answer": "Congestive cardiac failure",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0091",
+      "category": "general_medicine",
+      "question": "In caloric test, cold water stimulation causes movement of eye -",
+      "answer": "Some side",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0092",
+      "category": "general_medicine",
+      "question": "Which of the following is not false about annual risk of TB",
+      "answer": "It is represents new cases of TB",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0095",
+      "category": "general_medicine",
+      "question": "A Dentin 'Primer'?",
+      "answer": "Etches the dentin",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0097",
+      "category": "general_medicine",
+      "question": "Following are fibrous joints :",
+      "answer": "Pubic symphysis",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0098",
+      "category": "general_medicine",
+      "question": "For exhumation the order should be passed by -",
+      "answer": "Chief judicial magistrate",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0101",
+      "category": "general_medicine",
+      "question": "Which of the following disease with bird, ahropod and human chain",
+      "answer": "Malaria",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0103",
+      "category": "general_medicine",
+      "question": "Increase in pauwel's angle indicate",
+      "answer": "Impaction",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0105",
+      "category": "general_medicine",
+      "question": "Ifa Panchayat is dissolved, elections are to be held within?",
+      "answer": "3 months",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0109",
+      "category": "general_medicine",
+      "question": "Botulinum affects all of the following, EXCEPT:",
+      "answer": "Post ganglionic nerves",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0110",
+      "category": "general_medicine",
+      "question": "Which of the following is a poor prognostic factor for childhood ALL.",
+      "answer": "Age < 2 years",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0111",
+      "category": "general_medicine",
+      "question": "Relining of complete denture is not indicated when",
+      "answer": "There is excessive resorption of the ridge",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0112",
+      "category": "general_medicine",
+      "question": "Which of the following condition is necessary prerequisite for this change?",
+      "answer": "Scanty liquor amnii",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0113",
+      "category": "general_medicine",
+      "question": "Savita is 32 weeks pregnant presents in causality and diagnosed as a case of APH. Vitals are unstable with BP 80/60 which of the following is next step in M/n",
+      "answer": "Careful observation",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0114",
+      "category": "general_medicine",
+      "question": "All are true about Cancer breast, except:",
+      "answer": "Common in aged nulliparous",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0115",
+      "category": "general_medicine",
+      "question": "Which of the following vitamin reduces the risk of insulin resistance, obesity, and the metabolic syndrome?",
+      "answer": "Vitamin C",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0116",
+      "category": "general_medicine",
+      "question": "The following drugs have significant drug interactions with digoxin except:",
+      "answer": "Quinidine",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0117",
+      "category": "general_medicine",
+      "question": "Antiboiotic Prophylaxis for infective endocarditis is indicated in:",
+      "answer": "Prior coronary aery bypass graft",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0118",
+      "category": "general_medicine",
+      "question": "Adder Head\" appearance is found in:",
+      "answer": "USG",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0119",
+      "category": "general_medicine",
+      "question": "Ortolani's test is done for",
+      "answer": "Congenial dislocation of the knee joints",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0120",
+      "category": "general_medicine",
+      "question": "A 50 year old female patient complains of difficulty in swallowing. Patient gives h/o multiple diagnostic CT-scans of the head and neck region. This patient may be predominantly susceptible to which of the following?",
+      "answer": "Anaplastic thyroid carcinoma",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0121",
+      "category": "general_medicine",
+      "question": "Secondary retention for a removable partial denture is provided by",
+      "answer": "The direct retainer",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0122",
+      "category": "general_medicine",
+      "question": "Which of the following may be seen in second degree Hea block (select three options):",
+      "answer": "Prolonged conduction time",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0124",
+      "category": "general_medicine",
+      "question": "Egg shell calcification is seen in all except –",
+      "answer": "Post irradiation lymphoma",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0125",
+      "category": "general_medicine",
+      "question": "In inversion of the foot, the sole will face:",
+      "answer": "Laterally",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0126",
+      "category": "general_medicine",
+      "question": "Where does the \"knot\" is put in the neck during judicial hanging?",
+      "answer": "The back of the neck",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0127",
+      "category": "general_medicine",
+      "question": "Seal finger and whale finger are associated with -",
+      "answer": "Listeria",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0128",
+      "category": "general_medicine",
+      "question": "Which of the following muscle acts as unlocker of knee?",
+      "answer": "Gracilis",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0129",
+      "category": "general_medicine",
+      "question": "A 60 yr old chronic smoker presents with painless gross hematuria of 1 day duration. Which is the investigation of choice to know the cause of hematuria?",
+      "answer": "Urine routine",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0130",
+      "category": "general_medicine",
+      "question": "The most sensitive method for detecting cervical Chlamydia trachomatis infection is:",
+      "answer": "Enzyme immunoassay",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0131",
+      "category": "general_medicine",
+      "question": "A labourer involved with repair-work of sewers was admitted with fever, jaundice and renal failure. The most appropriate test to diagnose the infection in this patient is -",
+      "answer": "Paul Bunnell test",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0133",
+      "category": "general_medicine",
+      "question": "Congenital hydrocele is best treated by",
+      "answer": "Lord's procedure",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0134",
+      "category": "general_medicine",
+      "question": "Rate limiting step in cholesterol synthesis is catalysed by which of the following enzyme?",
+      "answer": "HMG CoA synthetase",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0135",
+      "category": "general_medicine",
+      "question": "Vaccine administered by following route is",
+      "answer": "H1n1 killed",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0136",
+      "category": "general_medicine",
+      "question": "A 40-year old diabetic patient presents with proptosis of one eye and black eschar over palate. The likely organism is :",
+      "answer": "E. coli",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0138",
+      "category": "general_medicine",
+      "question": "Investigations in a clinically suspected case of tuberculosis -",
+      "answer": "Bactec",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0139",
+      "category": "general_medicine",
+      "question": "Schizophrenia is treated by",
+      "answer": "Anti depressants",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0140",
+      "category": "general_medicine",
+      "question": "Fries test is used in the diagnosis of:",
+      "answer": "Chanchroid",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0141",
+      "category": "general_medicine",
+      "question": "A 45-year-old woman complains of severe headaches and difficulty in swallowing. Over the past 6 months, she has noticed small, red lesions around her mouth as well as thickening of her skin. The patient has \"stone facies\" on physical examination. Which of the following antigens is the most common and most specific target of autoantibody in patients with this disease?",
+      "answer": "P-ANCA (anti-myeloperoxidase)",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0145",
+      "category": "general_medicine",
+      "question": "Dimension stability of hydrocollids may be achieved by",
+      "answer": "prolonged manipulation",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0146",
+      "category": "general_medicine",
+      "question": "Blood supply of stomach is/are:",
+      "answer": "Lt gastroepiploic aery",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0147",
+      "category": "general_medicine",
+      "question": "Which of the following ultrasound finding has the highest association with aneuploidy?",
+      "answer": "Nuchal translucency",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0150",
+      "category": "general_medicine",
+      "question": "To feel comfoable and cool in a factory the conrrected effective temperature ( in degree Farenheit) should be -",
+      "answer": "Less tha 69",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0151",
+      "category": "general_medicine",
+      "question": "Test used for factor VIII deficiency identification is-",
+      "answer": "PT",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0152",
+      "category": "general_medicine",
+      "question": "A 19 year old female presents with pain in the neck for 5 days. She is not able to wear tie for her job because of neck pain. H/O fatigue and lethargy for 10 days. She had flu like symptoms 20 days ago which resolved spontaneously. BP 110/80 mmHg, Pulse 48/min. Extremities are cold and dry. Neck is very tender. ECG normal. TSH is elevated. ESR 30 mm/hr. Next appropriate step",
+      "answer": "Levothyroxine administration",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0156",
+      "category": "general_medicine",
+      "question": "Ligament teres is a remnant of ?",
+      "answer": "Umbilical aery",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0158",
+      "category": "general_medicine",
+      "question": "Which of the following is the most specific and sensitive screening test for renovascular hypeension?",
+      "answer": "HRCT",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0160",
+      "category": "general_medicine",
+      "question": "A 63 year old man presents with a triad of angina, syncope and congestive hea failure. Which of the following valvular hea lesion can be suspected-",
+      "answer": "Tricuspid regurgitation",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0161",
+      "category": "general_medicine",
+      "question": "Generalised thickening of cortical and cancellous bones is seen in",
+      "answer": "Osteogenesis imperfecta",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0162",
+      "category": "general_medicine",
+      "question": "An athelete presented with red coloured urine after 2 days of history of severe exeion. The most probable cause is?",
+      "answer": "Hematuria",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0163",
+      "category": "general_medicine",
+      "question": "High false positive cases in a community signify that disease has -",
+      "answer": "High prevalence & Low incidence",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0164",
+      "category": "general_medicine",
+      "question": "Which of the following is released from hypothalamus?",
+      "answer": "Orexin",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0166",
+      "category": "general_medicine",
+      "question": "Which statement best describes the cranial fossa?",
+      "answer": "The anterior cranial fossa contains the pituitary gland.",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0168",
+      "category": "general_medicine",
+      "question": "Which of these is the most impoant indication for Strassmans Metroplasty done for a bicornuate uterus?",
+      "answer": "Menorrhagia",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0169",
+      "category": "general_medicine",
+      "question": "A 2-year-old child had burns on buttocks, both legs, face, neck and singeing of hair. Total surface area burnt: JIPMER 14",
+      "answer": "27%",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0170",
+      "category": "general_medicine",
+      "question": "Which test helps to differentiate between concomitant squint and paralytic squint",
+      "answer": "Cover - uncover test",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0171",
+      "category": "general_medicine",
+      "question": "Best disinfectant of cholera stool is-",
+      "answer": "Bleaching powder",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0172",
+      "category": "general_medicine",
+      "question": "Black eye is a type of -",
+      "answer": "Ectopic abrasion",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0173",
+      "category": "general_medicine",
+      "question": "In a patient with a type of familial dyslipidemias he presented with palmar Xanthomas and he ias at increased risk of atherosclerosis and CAD.In Lipid profile there was elevation of triacylglycerols and cholesterol.And the IDL and chylomicrons were elevated.What is the pathophysiology of the condition?",
+      "answer": "Apo C-2 deficiency",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0175",
+      "category": "general_medicine",
+      "question": "Usually associated with parvovirus B19 infection in those with hereditary spherocytosis-",
+      "answer": "Mild to moderate splenomegaly",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0176",
+      "category": "general_medicine",
+      "question": "Carcinoma of the prostate arise from -",
+      "answer": "Central zone",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0177",
+      "category": "general_medicine",
+      "question": "A patient with cushinoid features presents with hemoptysis; he shows no response to dexamethasone suppression test; most likely diagnosis here is:",
+      "answer": "Adrenal adenoma",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0179",
+      "category": "general_medicine",
+      "question": "Following death of a person, what happens to potassium level in the vitreous.",
+      "answer": "Potassium level falls",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0180",
+      "category": "general_medicine",
+      "question": "Under transplantation of humans organs act, the punishment for the doctor involved is",
+      "answer": "< 2 years",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0182",
+      "category": "general_medicine",
+      "question": "A young lady with symptoms of hypehyroidism with elevated T4 and TSH levels. On examination, patient was not experiencing Tachycardia or excessive sweating.Fuher examination reveals bitemporal hemianopia. Next step of management",
+      "answer": "Sta antithyroid drugs and wait for symptoms to resolve.",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0183",
+      "category": "general_medicine",
+      "question": "Statuary rape is -",
+      "answer": "Less than 16 years",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0185",
+      "category": "general_medicine",
+      "question": "Most aggressive lung CA:",
+      "answer": "Adenocarcinoma",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0188",
+      "category": "general_medicine",
+      "question": "Mediastinal lymph node calcification is seen in which one of the following-",
+      "answer": "Lymphoma",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0190",
+      "category": "general_medicine",
+      "question": "The number of doses recommended for oral Ty21a typhoid vaccine is:",
+      "answer": "5",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0191",
+      "category": "general_medicine",
+      "question": "The drug used in petit mal seizures and has a narrow spectrum of antiepileptic activity is",
+      "answer": "Lamotrigine",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0192",
+      "category": "general_medicine",
+      "question": "Which test is not useful in a patient with history of Syncopal attack?",
+      "answer": "Tilt Table testing",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0195",
+      "category": "general_medicine",
+      "question": "In a 24 year old man weight of the upper limb is transmitted to the axial skeleton by:",
+      "answer": "Coracoacromial ligament",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0197",
+      "category": "general_medicine",
+      "question": "Schizophrenia is treated by:",
+      "answer": "Anti depressants",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    },
+    {
+      "id": "medmcqa_0198",
+      "category": "general_medicine",
+      "question": "Gene involved in Cowden syndrome is",
+      "answer": "P53",
+      "difficulty": "medium",
+      "keywords": [],
+      "source": "MedMCQA"
+    }
+  ]
+}

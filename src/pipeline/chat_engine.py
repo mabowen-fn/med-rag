@@ -13,13 +13,20 @@ class MedicalChatEngine:
     3. Confidence Scoring
     4. Citation Tracking
     5. LLM Generation with context
+    6. Confidence-based routing (safety)
+    7. Optional Self-RAG (self-reflection)
     """
     
-    def __init__(self, retriever, reranker, confidence_scorer, citation_tracker):
+    # Confidence thresholds for routing
+    CONFIDENCE_HIGH = 0.7
+    CONFIDENCE_MEDIUM = 0.5
+    
+    def __init__(self, retriever, reranker, confidence_scorer, citation_tracker, enable_self_rag=False):
         self.retriever = retriever
         self.reranker = reranker
         self.confidence_scorer = confidence_scorer
         self.citation_tracker = citation_tracker
+        self.enable_self_rag = enable_self_rag
         
         # Initialize Ollama LLM
         from llama_index.llms.ollama import Ollama
@@ -31,13 +38,19 @@ class MedicalChatEngine:
             request_timeout=600.0,
         )
         
+        # Initialize Self-RAG if enabled
+        if enable_self_rag:
+            from src.pipeline.self_rag import SelfRAG
+            self.self_rag = SelfRAG(self.llm)
+            logger.info("Self-RAG enabled")
+        
         # Multi-turn conversation history
         self.conversation_history: List[Dict[str, str]] = []
         
         logger.info("Medical chat engine initialized")
     
     def chat(self, query: str, use_rag: bool = True) -> Dict[str, Any]:
-        """Process a chat query through the full RAG pipeline"""
+        """Process a chat query through the full RAG pipeline with confidence-based routing"""
         logger.info(f"Processing query: {query[:100]}...")
         
         if not use_rag:
@@ -46,6 +59,7 @@ class MedicalChatEngine:
                 "response": response_text,
                 "citations": [],
                 "confidence": {"confidence": 0.0, "is_reliable": False, "reason": "RAG disabled"},
+                "routed": "no_rag",
             }
         
         # Step 1: Hybrid Retrieval (BM25 + Vector)
@@ -65,9 +79,27 @@ class MedicalChatEngine:
         # Step 4: Confidence Scoring
         confidence = self.confidence_scorer.calculate_confidence(query, reranked_docs)
         
-        # Step 5: Build context and generate response
-        context_text = self._build_context(reranked_docs)
-        response_text = self._generate_with_context(query, context_text, confidence)
+        # Step 5: Confidence-based routing (safety mechanism)
+        routing_decision = self._route_by_confidence(confidence)
+        logger.info(f"Confidence routing: {routing_decision['level']}")
+        
+        if routing_decision['level'] == 'low':
+            # Low confidence: escalate to disclaimer
+            response_text = routing_decision['disclaimer']
+            routed = "low_confidence_escalated"
+        else:
+            # Medium/High confidence: generate response
+            context_text = self._build_context(reranked_docs)
+            response_text = self._generate_with_context(query, context_text, confidence)
+            routed = "rag_generated"
+            
+            # Step 6: Optional Self-RAG for high-quality responses
+            if self.enable_self_rag and routing_decision['level'] == 'high':
+                self_rag_result = self.self_rag.self_reflect(query, response_text, context_text)
+                if self_rag_result.get("improved", False):
+                    response_text = self_rag_result["response"]
+                    routed = "self_rag_improved"
+                    logger.info("Response improved via Self-RAG")
         
         # Update conversation history
         self.conversation_history.append({"role": "user", "content": query})
@@ -81,7 +113,38 @@ class MedicalChatEngine:
             "response": response_text,
             "citations": self.citation_tracker.format_citations_for_display(),
             "confidence": confidence,
+            "routed": routed,
         }
+    
+    def _route_by_confidence(self, confidence: Dict[str, Any]) -> Dict[str, Any]:
+        """Route response based on confidence level (safety mechanism)"""
+        score = confidence.get("confidence", 0.0)
+        
+        if score >= self.CONFIDENCE_HIGH:
+            return {
+                "level": "high",
+                "action": "generate",
+                "disclaimer": None,
+            }
+        elif score >= self.CONFIDENCE_MEDIUM:
+            return {
+                "level": "medium",
+                "action": "generate_with_warning",
+                "disclaimer": None,
+            }
+        else:
+            return {
+                "level": "low",
+                "action": "escalate",
+                "disclaimer": (
+                    "I'm not confident enough to provide a reliable answer to this question. "
+                    "Medical information requires high accuracy, and I don't have sufficient "
+                    "evidence to respond safely.\n\n"
+                    "**Please consult a qualified healthcare professional** who can provide "
+                    "personalized medical advice based on your specific situation.\n\n"
+                    "If this is a medical emergency, please call your local emergency services immediately."
+                ),
+            }
     
     def _build_context(self, documents: List[Dict[str, Any]]) -> str:
         """Build context string from retrieved documents"""

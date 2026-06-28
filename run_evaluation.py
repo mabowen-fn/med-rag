@@ -3,8 +3,9 @@ import os
 import sys
 from pathlib import Path
 
-# Set HuggingFace to offline mode to use cached models
-os.environ['HF_HUB_OFFLINE'] = '1'
+# Allow downloading models from HuggingFace (will cache them locally)
+# Only set offline mode if you've already downloaded all models
+# os.environ['HF_HUB_OFFLINE'] = '1'
 
 from loguru import logger
 
@@ -35,16 +36,22 @@ def main():
     # Create evaluator
     evaluator = RAGEvaluator(chat_engine)
     
-    # Load evaluation dataset
+    # Load evaluation dataset (use expanded if available)
     logger.info("\nLoading evaluation dataset...")
-    qa_pairs = evaluator.load_evaluation_dataset("data/medical_qa_dataset.json")
+    expanded_path = Path("data/medical_qa_dataset_expanded.json")
+    if expanded_path.exists():
+        logger.info("Using expanded dataset (197 QA pairs)")
+        qa_pairs = evaluator.load_evaluation_dataset(str(expanded_path))
+    else:
+        logger.info("Using original dataset (58 QA pairs)")
+        qa_pairs = evaluator.load_evaluation_dataset("data/medical_qa_dataset.json")
     
-    # Run comparison (use 5 samples for quick demo, increase for full evaluation)
+    # Run comparison (use all samples for full evaluation)
     logger.info("\nStarting method comparison...")
-    logger.info("This will evaluate 3 methods on 5 samples each.")
-    logger.info("Total: 15 LLM calls (may take several minutes)\n")
+    logger.info(f"This will evaluate 3 methods on {len(qa_pairs)} samples each.")
+    logger.info(f"Total: {len(qa_pairs) * 3} LLM calls (may take 30-60 minutes)\n")
     
-    comparison_results = evaluator.compare_methods(qa_pairs, max_samples=5)
+    comparison_results = evaluator.compare_methods(qa_pairs, max_samples=None)
     
     # Generate report
     logger.info("\nGenerating evaluation report...")
