@@ -4,17 +4,28 @@ Compares baseline RAG vs SOTA RAG with industry-standard metrics
 """
 import json
 import sys
+import argparse
 from pathlib import Path
 from loguru import logger
 
 sys.path.insert(0, str(Path(__file__).parent))
 
 from main import create_chat_engine
-from src.evaluation import RAGASEvaluator, generate_ragas_report
+from src.evaluation import get_ragas_evaluator
+
+
+def parse_args():
+    """Parse command line arguments"""
+    parser = argparse.ArgumentParser(description='Run RAGAS evaluation')
+    parser.add_argument('--samples', type=int, default=10, 
+                       help='Number of samples to evaluate (default: 10, use 0 for all)')
+    return parser.parse_args()
 
 
 def run_ragas_evaluation():
     """Run comprehensive RAGAS evaluation"""
+    args = parse_args()
+    
     logger.info("=" * 80)
     logger.info("RAGAS EVALUATION: Baseline vs SOTA")
     logger.info("=" * 80)
@@ -30,8 +41,8 @@ def run_ragas_evaluation():
     
     qa_pairs = data['qa_pairs']
     
-    # Select subset for evaluation (RAGAS can be slow)
-    num_samples = min(20, len(qa_pairs))
+    # Determine number of samples
+    num_samples = None if args.samples == 0 else min(args.samples, len(qa_pairs))
     logger.info(f"Evaluating on {num_samples} samples...")
     
     test_qa = qa_pairs[:num_samples]
@@ -85,6 +96,8 @@ def run_ragas_evaluation():
     logger.info("Running RAGAS evaluation...")
     logger.info("=" * 80)
     
+    # Get RAGAS classes via lazy import
+    RAGASEvaluator, generate_ragas_report = get_ragas_evaluator()
     ragas_eval = RAGASEvaluator()
     
     comparison_results = ragas_eval.compare_methods(
@@ -142,3 +155,4 @@ def run_ragas_evaluation():
 
 if __name__ == "__main__":
     run_ragas_evaluation()
+
