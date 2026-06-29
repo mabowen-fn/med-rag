@@ -15,23 +15,60 @@ class DatasetLoader:
         Path(self.cache_dir).mkdir(parents=True, exist_ok=True)
     
     def load_huatuo_26m(self, subset: str = "default", split: str = "train", max_samples: Optional[int] = None):
-        """Load Huatuo-26M dataset subset"""
-        logger.info(f"Loading Huatuo-26M dataset (subset={subset}, split={split})")
-        try:
-            dataset = load_dataset(
-                "FreedomIntelligence/Huatuo-26M",
-                subset,
-                split=split,
-                cache_dir=self.cache_dir,
-            )
-            if max_samples:
-                dataset = dataset.select(range(min(max_samples, len(dataset))))
-            logger.info(f"Loaded {len(dataset)} samples from Huatuo-26M")
-            return dataset
-        except Exception as e:
-            logger.warning(f"Failed to load Huatuo-26M: {e}")
+        """Load Huatuo-26M dataset (composed of multiple sub-datasets)"""
+        logger.info(f"Loading Huatuo-26M dataset")
+        
+        # Huatuo-26M is split into multiple datasets on HuggingFace
+        dataset_names = [
+            "FreedomIntelligence/huatuo_knowledge_graph_qa",
+            "FreedomIntelligence/huatuo_encyclopedia_qa",
+        ]
+        
+        all_data = []
+        
+        for dataset_name in dataset_names:
+            try:
+                logger.info(f"Loading {dataset_name}...")
+                dataset = load_dataset(
+                    dataset_name,
+                    cache_dir=self.cache_dir,
+                )
+                
+                # Get the data (handle different splits)
+                if isinstance(dataset, dict):
+                    # Dataset has splits, use the first available
+                    for split_name in dataset.keys():
+                        data = dataset[split_name]
+                        break
+                else:
+                    data = dataset
+                
+                # Convert to list of dicts with standard format
+                for item in data:
+                    # Huatuo datasets use 'questions' and 'answers' fields
+                    if 'questions' in item and 'answers' in item:
+                        all_data.append({
+                            "instruction": item['questions'],
+                            "output": item['answers']
+                        })
+                
+                logger.info(f"Loaded {len(data)} samples from {dataset_name}")
+                
+            except Exception as e:
+                logger.warning(f"Failed to load {dataset_name}: {e}")
+                continue
+        
+        if not all_data:
+            logger.warning("Failed to load any Huatuo-26M data")
             logger.info("Falling back to synthetic medical data")
             return self._load_synthetic_medical_data(max_samples)
+        
+        # Limit samples if requested
+        if max_samples and max_samples < len(all_data):
+            all_data = all_data[:max_samples]
+        
+        logger.info(f"Total Huatuo-26M samples loaded: {len(all_data)}")
+        return all_data
     
     def load_cmeqa(self, split: str = "test"):
         """Load CMeQA dataset for multi-turn evaluation"""
@@ -128,3 +165,4 @@ class DatasetLoader:
             data = json.load(f)
         logger.info(f"Loaded processed data from {input_path}")
         return data
+

@@ -3,6 +3,7 @@ from typing import List, Optional
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from loguru import logger
 from config import config
+from tqdm import tqdm
 
 
 class EmbeddingModel:
@@ -14,18 +15,37 @@ class EmbeddingModel:
         
         logger.info(f"Loading embedding model: {self.model_name} on {self.device}")
         
-        # For Mac M1, force CPU
         self._model = HuggingFaceEmbedding(
             model_name=self.model_name,
-            device="cpu",
+            device=self.device,
             cache_folder=config.data.cache_dir,
         )
         
         logger.info("Embedding model loaded successfully")
     
-    def embed_texts(self, texts: List[str]) -> List[List[float]]:
-        """Embed a list of texts"""
-        return self._model.get_text_embedding_batch(texts)
+    def embed_texts(self, texts: List[str], batch_size: int = 32, show_progress: bool = True) -> List[List[float]]:
+        """Embed a list of texts with progress tracking
+        
+        Args:
+            texts: List of texts to embed
+            batch_size: Number of texts to process in each batch
+            show_progress: Whether to show progress bar
+        """
+        all_embeddings = []
+        
+        # Process in batches with progress bar
+        num_batches = (len(texts) + batch_size - 1) // batch_size
+        
+        iterator = range(0, len(texts), batch_size)
+        if show_progress:
+            iterator = tqdm(iterator, desc="Embedding texts", total=num_batches)
+        
+        for i in iterator:
+            batch = texts[i:i + batch_size]
+            batch_embeddings = self._model.get_text_embedding_batch(batch)
+            all_embeddings.extend(batch_embeddings)
+        
+        return all_embeddings
     
     def embed_query(self, query: str) -> List[float]:
         """Embed a single query"""
@@ -40,3 +60,4 @@ class EmbeddingModel:
     def __call__(self, texts: List[str]) -> List[List[float]]:
         """Make it callable like the LlamaIndex embedding model"""
         return self.embed_texts(texts)
+
